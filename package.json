@@ -1,0 +1,16 @@
+{
+  "devDependencies": {
+    "@symfony/webpack-encore": "^0.17.1",
+    "babel-preset-react": "^6.24.1",
+    "prop-types": "^15.6.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "redux": "^3.7.2",
+    "redux-thunk": "^2.2.0",
+    "sass-loader": "^6.0.6",
+    "webpack-notifier": "^1.5.0"
+  },
+  "dependencies": {
+    "react-redux": "^5.0.6"
+  }
+}

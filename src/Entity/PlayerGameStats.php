@@ -36,5 +36,7 @@ class PlayerGameStats
     /** @ORM\Column(type="integer") */
     private $attempts;    
 
+    /** @ORM\Column(type="integer") */
+    private $yards;    
 
 }
