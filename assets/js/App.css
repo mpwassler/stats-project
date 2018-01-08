@@ -1,0 +1,40 @@
+.navlist{
+	list-style: none;
+	margin-top: 40px;
+	
+}
+.navlist_item{
+
+}
+.navlist_btn{
+	margin-right: 10px;
+}
+
+.totals {
+	margin: 80px 0 80px 0;
+}
+.badge {
+	float: right;
+}
+.list-group-item {
+	justify-content: space-between;
+}
+.thead {
+	background-color: #0275d8;
+	color: #fff;
+}
+.thead th {
+	font-weight: normal;
+	font-size: 12px;
+}
+
+.table_sublabel {
+	font-size: 10px;
+	float: right;
+	margin-right: 10%;
+}
+
+.tablewrap {
+	overflow-x: auto;
+
+}

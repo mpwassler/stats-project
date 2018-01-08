@@ -16,8 +16,6 @@ class Player
      */
     private $id;
 
-    // add your own fields
-
     /** @ORM\Column(type="string", length=70) */
     private $firstName;
 
@@ -41,6 +39,25 @@ class Player
 
     /** @ORM\Column(type="string", length=10) */
     private $draftType;
+
+    /** @ORM\OneToMany(targetEntity="PlayerGameStats", mappedBy="player",fetch="EAGER") */
+    private $gameStats;
+
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    public function getGameStats() 
+    {
+        return $this->gameStats;
+    }
+
+    public function setGameStats($stats) 
+    {
+        $this->gameStats = $stats;
+    }
+
 
     public function getFirstName() 
     {

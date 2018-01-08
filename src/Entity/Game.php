@@ -16,13 +16,42 @@ class Game
      */
     private $id;
 
-    // add your own fields
-    /** @ORM\ManyToOne(targetEntity="Team") */	
+    /** @ORM\ManyToOne(targetEntity="Team", fetch="EAGER") */	
     private $homeTeam;
 
-	/** @ORM\ManyToOne(targetEntity="Team") */
+	/** @ORM\ManyToOne(targetEntity="Team", fetch="EAGER") */
     private $awayTeam;
 
     /** @ORM\Column(type="integer") */
     private $week;
+
+    public function getHomeTeam() 
+    {
+        return $this->homeTeam;
+    }
+
+    public function setHomeTeam($homeTeam) 
+    {
+        $this->homeTeam = $homeTeam;
+    }
+
+    public function getAwayTeam() 
+    {
+        return $this->awayTeam;
+    }
+
+    public function setAwayTeam($awayTeam) 
+    {
+        $this->awayTeam = $awayTeam;
+    }
+
+    public function getWeek() 
+    {
+        return $this->week;
+    }
+
+    public function setWeek( $week ) 
+    {
+        $this->week = $week;
+    }
 }

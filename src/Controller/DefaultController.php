@@ -5,7 +5,9 @@ namespace App\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\Serializer\SerializerInterface;
 
 class DefaultController extends Controller
 {
@@ -14,23 +16,28 @@ class DefaultController extends Controller
      */
     public function index()
     {
-        return new Response('Welcome to your new controller!');
+         return $this->render('layout.html.twig');
     }
 
     /**
-     * @Route("/api/players/", name="api_players")
+     * @Route("/api/player/", name="api_players")
      */
-    public function showPlayersAction(Request $request)
+    public function showPlayersAction()
     {
-    	return new Response('show all players');	
+        $em = $this->getDoctrine()->getManager();        
+        $query = $em->createQuery('SELECT p.id, p.firstName, p.lastName FROM App\Entity\Player as p');        
+        return new JsonResponse($query->getResult());
     }
 
     /**
-     * @Route("/api/players/{player}", name="api_player_id")
+     * @Route("/api/player/{player}", name="api_player_id")
      */
-    public function showPlayerByIdAction( $player )
-    {
-    	return new Response('show player: ' . $player);	
+    public function showPlayerByIdAction( $player, SerializerInterface $serializer )
+    {   
+
+        $em = $this->getDoctrine()->getManager();
+        $player = $em->getRepository('App\Entity\Player')->findOneBy([ 'id' => $player ]);            
+        return new JsonResponse($serializer->normalize($player));
     }
 }
 

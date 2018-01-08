@@ -3,7 +3,6 @@ var Encore = require('@symfony/webpack-encore');
 
 Encore
     // the project directory where all compiled assets will be stored
-    .enableReactPreset()
     .setOutputPath('public/build/')
 
     // the public path used by the web server to access the previous directory
@@ -19,6 +18,10 @@ Encore
     .autoProvidejQuery()
 
     .enableSourceMaps(!Encore.isProduction())
+    .enableReactPreset()
+    .configureBabel(function(babelConfig) {
+            babelConfig.plugins = ["transform-object-rest-spread","transform-class-properties"]
+    })
 
     // empty the outputPath dir before each build
     .cleanupOutputBeforeBuild()
