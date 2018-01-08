@@ -3,9 +3,7 @@ const initState = {
 	currentPlayer: {}
 }
 
-
 export default ( state = initState, action ) => {
-	console.log(action.type, action.payload)
 	switch(action.type) {
 		case 'SET_PLAYERS':
 			return {

@@ -24,7 +24,6 @@ const NavBar = (props) => {
 }
 
 function mapStateToProps(state)  {
-	console.log(state)
 	return {
 		players: state.players,
 		currentPlayer: state.currentPlayer

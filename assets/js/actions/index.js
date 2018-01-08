@@ -11,7 +11,6 @@ export const setSelectedPlayer = (player) => ({
 })
 
 export const getPlayers = () => {
-	console.log('get')
 	return (dispatch) => {
 		httpRequest('/api/player/')
 		.then( players => { 

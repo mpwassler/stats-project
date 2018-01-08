@@ -2,6 +2,7 @@ import mysql.connector
 import csv
 
 # Just a little script to help move the data into a more normalized structure 
+# teams and players I just imported by hand
 
 cnx = mysql.connector.connect( user='root',password='',	host='127.0.0.1', database='pff')
 cursor = cnx.cursor(buffered=True)

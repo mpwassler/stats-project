@@ -1,5 +1,4 @@
-import React, { Component } from 'react'
-import { connect } from 'react-redux'
+import React from 'react'
 import NavBar from './components/NavBar'
 import PlayerGameStats from './components/PlayerGameStats'
 import PlayerTotals from './components/PlayerTotals'
@@ -16,10 +15,4 @@ const App = (props) => {
 	)	
 }
 
-function mapStateToProps(state) {
-	return {
-		
-	}
-}
-
-export default connect(mapStateToProps)(App)
+export default App
