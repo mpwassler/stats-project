@@ -1,17 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import {getPasserRating, getCompletionPercentage} from '../Utils/stats'
-
-const getOposingTeamSign = ( playerTeam, homeTeam, awayTeam ) => {
-	switch(playerTeam) {
-		case homeTeam:
-			return `vs  ${awayTeam}`
-		case awayTeam:
-			return `@ ${homeTeam}`	
-		default:
-			return ``	
-	}
-}
+import GameStatRow from './GameStatRow'
 
 const PlayerGameStats = (props) => {
 	let {player} = props
@@ -35,23 +24,7 @@ const PlayerGameStats = (props) => {
 				  </thead>
 				  <tbody>
 				  	{player.gameStats.map( (stat, cnt) => {
-				  		let { completions,  attempts,  yards,  touchdowns,  interceptions, game } = stat
-				  		return  (
-				  			<tr key={cnt}>
-				      			<th scope="row"> {stat.game.week}    
-				      				<span className="table_sublabel" >
-				      					{getOposingTeamSign( player.draftedByTeam.name, game.homeTeam.name, game.awayTeam.name)}
-				      				</span>
-				      			</th>
-				      			<td>{attempts}</td>
-				      			<td>{completions}</td>
-				      			<td>{getCompletionPercentage(completions, attempts)}</td>				      			
-				      			<td>{touchdowns || '--'}</td>
-				      			<td>{interceptions || '--'}</td>
-				      			<td>{yards}</td>
-				      			<td>{getPasserRating( completions, attempts, yards, touchdowns, interceptions)}</td>
-				    		</tr>
-				    	)	
+				  		return <GameStatRow key={cnt} player={player} {...stat}  /> 				  		
 				  	})}
 				  </tbody>
 				</table>

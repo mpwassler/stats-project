@@ -34,7 +34,7 @@ const SeasonTotals = ({games}) => {
 		  				{getCompletionPercentage( 
 		  					sumStatsArray(games, 'completions'),
 		  					sumStatsArray(games, 'attempts')				  					
-		  				)}
+		  				)}%
 		  			</span>
 		  	  	</li>
 		  	  	

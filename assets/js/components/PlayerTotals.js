@@ -10,15 +10,10 @@ import {
 	getCompletionPercentage
 } from '../Utils/stats'
 
-const getAge = (birthDate, currentDate) => {
-	console.log(birthDate)	
-	return currentDate - birthDate
-}
-
 const calculateAge = (birthDate) => { 
-    let diff_ms = Date.now() - birthDate.getTime()
-    let age_dt = new Date(diff_ms)  
-    return Math.abs(age_dt.getUTCFullYear() - 1970)
+    let diff = Date.now() - birthDate.getTime()
+    let diffAge = new Date(diff)  
+    return Math.abs(diffAge.getUTCFullYear() - 1970)
 }
 
 const PlayerTotals = ({player}) => {
