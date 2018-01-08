@@ -22,7 +22,7 @@ Update database credentials in .env
 
 ### run project dev server
 
-'php bin/console server:start'
+`php bin/console server:start`
 
 ### build front end assets
 
