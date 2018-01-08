@@ -29,7 +29,7 @@ Update database credentials in .env
 
 `php bin/console server:start`
 
-### build front end assets
+### build front end assets (if you need to)
 
 `yarn install`
 
