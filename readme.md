@@ -12,6 +12,8 @@ Update database credentials in .env
 
 `DATABASE_URL=mysql://db_user:db_password@127.0.0.1:3306/db_name`
 
+### install PHP dependencies
+
 `composer install`
 
 ### load database data
