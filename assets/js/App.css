@@ -6,6 +6,7 @@
 
 .navlist_btn{
 	margin-right: 10px;
+	cursor: pointer;
 }
 
 .totals {
@@ -34,4 +35,9 @@
 
 .tablewrap {
 	overflow-x: auto;
+	margin-bottom: 80px;
+}
+
+h1,h2,h3,h4,p,span,a,button,td,th{
+	font-family:"Open Sans", san-serif !important;
 }
