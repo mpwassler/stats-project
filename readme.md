@@ -1,5 +1,6 @@
 ### dependancies 
 - PHP 7.0+
+- MySQL 5.7.19
 - Composer
 - Node 8.9.1+
 - Yarn 1.2.1+
