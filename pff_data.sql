@@ -16,12 +16,12 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Current Database: `pff`
+-- Current Database: `pff_player_stats_mw`
 --
 
-CREATE DATABASE /*!32312 IF NOT EXISTS*/ `pff` /*!40100 DEFAULT CHARACTER SET utf8 */;
+CREATE DATABASE /*!32312 IF NOT EXISTS*/ `pff_player_stats_mw` /*!40100 DEFAULT CHARACTER SET utf8 */;
 
-USE `pff`;
+USE `pff_player_stats_mw`;
 
 --
 -- Table structure for table `game`
