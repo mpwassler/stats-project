@@ -6,6 +6,8 @@
 
 ### clone the project
 
+`cd stats-project`
+
 Rename .env.dist to .env.
 
 Update database credentials in .env
@@ -16,7 +18,9 @@ Update database credentials in .env
 
 `composer install`
 
-### load database data
+### create database and load data
+ 
+`php bin/console doctrine:database:create`
 
 `php bin/console doctrine:database:import pff_data.sql`
 
